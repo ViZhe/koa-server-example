@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-prettier",
+    "tslint-config-airbnb"
+  ],
+  "rules": {
+    "no-consecutive-blank-lines": [true, 2],
+    "max-line-length": [
+      true, {
+      "limit": 120,
+      "ignore-pattern": "^import|^export|'.*'[;|,]$"
+    }]
+  }
+}
