@@ -1,5 +1,5 @@
 
-import koa from 'koa';
+import Koa from 'koa';
 import koaBodyparser from 'koa-bodyparser';
 import koaHelmet from 'koa-helmet';
 import koaJwt from 'koa-jwt';
@@ -24,7 +24,7 @@ mongoose.connect(MONGO.MAIN, {
 });
 mongoose.set('debug', IS_PRODUCTION);
 
-const app = new koa();
+const app = new Koa();
 app.use(koaHelmet());
 app.use(koaBodyparser());
 app.use(koaLogger());

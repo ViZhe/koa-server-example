@@ -1,8 +1,8 @@
 
-import koaRouter from 'koa-router';
+import KoaRouter from 'koa-router';
 
 
-const router = new koaRouter();
+const router = new KoaRouter();
 
 router.all('/api', (ctx) => {
   ctx.body = {
