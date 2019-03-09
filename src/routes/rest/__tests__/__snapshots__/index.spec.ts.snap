@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`REST API Path /api should match body with snapshot 1`] = `
+Object {
+  "message": "API method not allowed",
+  "status": 405,
+  "success": false,
+}
+`;
