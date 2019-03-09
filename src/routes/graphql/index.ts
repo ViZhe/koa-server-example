@@ -1,7 +1,7 @@
 
 import { ApolloServer, gql } from 'apollo-server-koa';
 import { makeExecutableSchema } from 'graphql-tools';
-import { Context } from 'koa';
+import Koa from 'koa';
 import merge from 'lodash/merge';
 
 import { GRAPHQL, IS_PRODUCTION } from '../../config';
@@ -40,7 +40,7 @@ const graphqlSchema = makeExecutableSchema({
 
 const server = new ApolloServer({
   cacheControl: true,
-  context: (ctx: Context) => ctx.context,
+  context: (ctx: Koa.Context) => ctx.context,
   formatError: IS_PRODUCTION ? GRAPHQL.formatErrorProd : GRAPHQL.formatErrorDev,
   schema: graphqlSchema,
   tracing: true,
