@@ -2,7 +2,7 @@
 import { ApolloServer, gql } from 'apollo-server-koa';
 import { makeExecutableSchema } from 'graphql-tools';
 import Koa from 'koa';
-import merge from 'lodash/merge';
+import { merge } from 'lodash';
 
 import { GRAPHQL, IS_PRODUCTION } from '../../config';
 import { resolvers as UserResolvers, typeDef as User } from './types/User';
