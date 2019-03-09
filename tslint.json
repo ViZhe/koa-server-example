@@ -1,15 +1,28 @@
 {
   "extends": [
-    "tslint:recommended",
+    "tslint:latest",
     "tslint-config-prettier",
     "tslint-config-airbnb"
   ],
   "rules": {
-    "no-consecutive-blank-lines": [true, 2],
+    "import-blacklist": true,
+    "import-name": false,
     "max-line-length": [
       true, {
       "limit": 120,
       "ignore-pattern": "^import|^export|'.*'[;|,]$"
-    }]
+    }],
+    "member-access": false,
+    "no-consecutive-blank-lines": [true, 2],
+    "no-implicit-dependencies": [true, "dev"],
+    "no-submodule-imports": [true, "antd"],
+    "object-shorthand-properties-first": false,
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-pascal-case",
+      "allow-leading-underscore"
+    ]
   }
 }
